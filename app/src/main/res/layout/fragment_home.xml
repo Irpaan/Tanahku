@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.Home">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="277dp"
+        android:scaleX="1.4"
+        android:scaleY="1.05"
+        android:src="@drawable/home_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="24dp"
+        android:textSize="24dp"
+        android:text="Hai," />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="75dp"
+        android:textSize="24dp"
+        android:text="Andri Rahmadani" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textStyle=""
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="24dp"
+        android:textSize="18dp"
+        android:text="Selamat Siang!" />
+
+    <ImageView
+        android:id="@+id/img_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/toko"
+        android:layout_marginTop="140dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop">
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="330dp"
+        android:textStyle="bold"
+        android:text="Lainnya"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="350dp"
+        android:text="Fitur Bermanfaat Untuk Kamu"/>
+
+
+
+    <LinearLayout android:id="@+id/linearFitur"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="385dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp">
+
+        <ImageView
+            android:id="@+id/imageGroupTwentyOne"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="14dp"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription,ImageContrastCheck"
+            android:src="@drawable/fitur1" />
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnh3bold"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.75" android:layout_width="0dp" android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtH3boldOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:singleLine="true"
+                tools:ignore="TextSizeCheck"
+                android:text="Online Course" />
+
+            <TextView
+                android:id="@+id/txtBodylargesemi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="10dp"
+                tools:ignore="TextSizeCheck,TextContrastCheck"
+                android:text="Belajar tentang pertanian secara online" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageVector"
+            android:layout_width="11dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="24dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_vector"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+    </LinearLayout>
+
+
+    <LinearLayout android:id="@+id/linearFitur2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="470dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp">
+
+        <ImageView
+            android:id="@+id/imageGroupTwentyOne2"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="14dp"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription,ImageContrastCheck"
+            android:src="@drawable/konsultasi" />
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnh3bold2"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.75" android:layout_width="0dp" android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtH3boldOne2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:singleLine="true"
+                tools:ignore="TextSizeCheck"
+                android:text="Konsultasi" />
+
+            <TextView
+                android:id="@+id/txtBodylargesemi2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="10dp"
+                tools:ignore="TextSizeCheck,TextContrastCheck"
+                android:text="Konsultasikan budidaya tanamanmu dengan ahlinya" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageVector2"
+            android:layout_width="11dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="24dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_vector"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+    </LinearLayout>
+
+
+    <LinearLayout android:id="@+id/linearFitur3"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="555dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp">
+
+        <ImageView
+            android:id="@+id/imageGroupTwentyOne3"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="14dp"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription,ImageContrastCheck"
+            android:src="@drawable/pantau" />
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnh3bold3"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.75" android:layout_width="0dp" android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtH3boldOne3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:singleLine="true"
+                tools:ignore="TextSizeCheck"
+                android:text="Pantau Tanamanmu" />
+
+            <TextView
+                android:id="@+id/txtBodylargesemi3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="10dp"
+                tools:ignore="TextSizeCheck,TextContrastCheck"
+                android:text="Pantau tanamanmu secara realtime di smartphone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageVector3"
+            android:layout_width="11dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="24dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_vector"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+    </LinearLayout>
+
+
+
+</FrameLayout>
