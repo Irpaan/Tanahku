@@ -1,0 +1,66 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.kamera.KameraActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/selectBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_select"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="10dp" />
+
+
+        <Button
+            android:id="@+id/captureBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_camera"
+            android:background="@android:color/transparent"
+            android:drawablePadding="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+
+        <Button
+            android:id="@+id/predictBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Predict"
+            android:textColor="#FFFF"
+            android:backgroundTint="#000"
+            android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@id/buttonContainer"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="37dp"
+        android:text="Result :"
+        android:textAlignment="center"
+        android:textColor="#808080"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</RelativeLayout>
