@@ -21,6 +21,9 @@ data class SignInResult(
     @field:SerializedName("userId")
     val userId: String,
 
+    @field:SerializedName("email")
+    val email: String,
+
     @field:SerializedName("token")
     val token: String
 )

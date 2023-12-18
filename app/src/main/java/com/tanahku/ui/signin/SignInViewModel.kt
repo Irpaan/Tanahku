@@ -27,8 +27,8 @@ class SignInViewModel (private val preference: UserPreference) : ViewModel(){
     fun getUser(): LiveData<SignInResult> {
         return preference.getUser().asLiveData()
     }
-    fun saveUser(userName: String, userId: String, userToken: String){
-        viewModelScope.launch { preference.saveUser(userName, userId, userToken) }
+    fun saveUser(userName: String, userId: String, email : String,userToken: String){
+        viewModelScope.launch { preference.saveUser(userName, userId, email,userToken) }
     }
     fun SignOut(){
         viewModelScope.launch { preference.signout() }

@@ -39,6 +39,7 @@ class SignInActivity : AppCompatActivity() {
             signInViewModel.saveUser(
                 login.loginResult.name,
                 login.loginResult.userId,
+                login.loginResult.email,
                 login.loginResult.token,
             )
         }

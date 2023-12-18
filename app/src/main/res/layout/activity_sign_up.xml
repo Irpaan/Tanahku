@@ -14,7 +14,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:gravity="center_horizontal"
-        android:text="@string/signin"
+        android:text="@string/signup"
         android:textColor="@color/lime"
         android:textSize="28sp"
         android:textStyle="bold"

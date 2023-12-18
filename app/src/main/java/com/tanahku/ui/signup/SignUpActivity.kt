@@ -13,7 +13,6 @@ import com.tanahku.data.UserPreference
 import com.tanahku.data.dataStore
 import com.tanahku.databinding.ActivitySignUpBinding
 import com.tanahku.ui.ViewModelFactory
-import com.tanahku.ui.detailtanah.DetailTanahActivity
 import com.tanahku.ui.signin.SignInActivity
 
 class SignUpActivity : AppCompatActivity() {
@@ -46,7 +45,7 @@ class SignUpActivity : AppCompatActivity() {
                 alertDialog.show()
                 Handler(Looper.getMainLooper()).postDelayed({
                     alertDialog.dismiss()
-                    val intent = Intent(this, DetailTanahActivity::class.java)
+                    val intent = Intent(this, SignInActivity::class.java)
                     startActivity(intent)
                     finish()
                 }, 3000)
