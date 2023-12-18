@@ -264,7 +264,6 @@
                 android:text="Logout"
                 tools:ignore="TextSizeCheck" />
         </LinearLayout>
-
     </LinearLayout>
 
 </FrameLayout>
