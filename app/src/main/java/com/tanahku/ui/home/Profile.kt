@@ -39,6 +39,7 @@ class Profile : Fragment() {
     private lateinit var fitur4 : LinearLayout
     private lateinit var signout : LinearLayout
     private lateinit var name : TextView
+    private lateinit var emailUser : TextView
     private lateinit var signInViewModel: SignInViewModel
 
     val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "user_preferences")
@@ -51,6 +52,7 @@ class Profile : Fragment() {
         fitur4 = view.findViewById(R.id.linearRowarrowrightThree)
         signout = view.findViewById(R.id.linearRowfirrsignout)
         name = view.findViewById(R.id.username)
+        emailUser = view.findViewById(R.id.useremail)
 
 
 
@@ -61,11 +63,18 @@ class Profile : Fragment() {
 
         signInViewModel.getUser().observe(this, { signInResult ->
             val nama = signInResult?.name
+            val email = signInResult?.email
             if (nama != null) {
                 // Set nilai nama ke dalam TextView
                 name.text = nama
             } else {
-                // Handle jika nilai nama null, jika diperlukan
+                name.text = "User"
+            }
+            if (email != null) {
+                // Set nilai nama ke dalam TextView
+                emailUser.text = email
+            } else {
+                emailUser.text = "email@example.com"
             }
         })
 
