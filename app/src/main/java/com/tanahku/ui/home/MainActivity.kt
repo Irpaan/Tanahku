@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                         R.id.navigation_signout -> {
                             signInViewModel.SignOut()
                         }
-
+                        
                         else ->{
                         }
                     }

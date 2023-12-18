@@ -229,7 +229,6 @@
                 android:src="@drawable/img_arrowright"
                 tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
         </LinearLayout>
-
     </LinearLayout>
 
 </FrameLayout>
