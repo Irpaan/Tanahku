@@ -1,5 +1,6 @@
 package com.tanahku.ui.home
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,8 +8,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.tanahku.R
+import com.tanahku.data.UserPreference
+import com.tanahku.ui.ViewModelFactory
+import com.tanahku.ui.signin.SignInViewModel
+import kotlinx.coroutines.launch
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,17 +35,46 @@ class Home : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var signInViewModel: SignInViewModel
     private lateinit var img1: ImageView
     private lateinit var fitur1: LinearLayout
     private lateinit var fitur2: LinearLayout
     private lateinit var fitur3: LinearLayout
+    private lateinit var name : TextView
+
+    val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "user_preferences")
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        signInViewModel = ViewModelProvider(
+            this,
+            ViewModelFactory(UserPreference.getInstance(requireContext().dataStore))
+        )[SignInViewModel::class.java]
+
+        name = view.findViewById(R.id.username)
+
+
+
+        signInViewModel.getUser().observe(this, { signInResult ->
+            val nama = signInResult?.name
+            if (nama != null) {
+                // Set nilai nama ke dalam TextView
+                name.text = nama
+            } else {
+                // Handle jika nilai nama null, jika diperlukan
+            }
+        })
+
+
+
         img1 = view.findViewById(R.id.img_home)
         fitur1 = view.findViewById(R.id.linearFitur)
         fitur2 = view.findViewById(R.id.linearFitur2)
         fitur3 = view.findViewById(R.id.linearFitur3)
+
+
+
         img1.setOnClickListener{
             val toast = Toast.makeText(requireActivity(), "Silahkan Klik Tombol Scan", Toast.LENGTH_SHORT)
             toast.show()

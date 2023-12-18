@@ -1,13 +1,23 @@
 package com.tanahku.ui.home
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.ViewModelProvider
 import com.tanahku.R
+import com.tanahku.data.UserPreference
+import com.tanahku.data.dataStore
+import com.tanahku.ui.ViewModelFactory
+import com.tanahku.ui.signin.SignInViewModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,6 +37,11 @@ class Profile : Fragment() {
     private lateinit var fitur2 : LinearLayout
     private lateinit var fitur3 : LinearLayout
     private lateinit var fitur4 : LinearLayout
+    private lateinit var signout : LinearLayout
+    private lateinit var name : TextView
+    private lateinit var signInViewModel: SignInViewModel
+
+    val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "user_preferences")
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -34,6 +49,25 @@ class Profile : Fragment() {
         fitur2 = view.findViewById(R.id.linearRowarrowrightOne)
         fitur3 = view.findViewById(R.id.linearRowarrowrightTwo)
         fitur4 = view.findViewById(R.id.linearRowarrowrightThree)
+        signout = view.findViewById(R.id.linearRowfirrsignout)
+        name = view.findViewById(R.id.username)
+
+
+
+        signInViewModel = ViewModelProvider(
+            this,
+            ViewModelFactory(UserPreference.getInstance(requireContext().dataStore))
+        )[SignInViewModel::class.java]
+
+        signInViewModel.getUser().observe(this, { signInResult ->
+            val nama = signInResult?.name
+            if (nama != null) {
+                // Set nilai nama ke dalam TextView
+                name.text = nama
+            } else {
+                // Handle jika nilai nama null, jika diperlukan
+            }
+        })
 
         fitur1.setOnClickListener{
             val toast = Toast.makeText(requireActivity(), "Coming Soon...", Toast.LENGTH_SHORT)
@@ -50,6 +84,9 @@ class Profile : Fragment() {
         fitur4.setOnClickListener{
             val toast = Toast.makeText(requireActivity(), "Coming Soon...", Toast.LENGTH_SHORT)
             toast.show()
+        }
+        signout.setOnClickListener{
+            signInViewModel.SignOut()
         }
 
 
