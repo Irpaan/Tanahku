@@ -27,7 +27,6 @@ class Profile : Fragment() {
     private lateinit var fitur2 : LinearLayout
     private lateinit var fitur3 : LinearLayout
     private lateinit var fitur4 : LinearLayout
-    private lateinit var signout : LinearLayout
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -35,7 +34,6 @@ class Profile : Fragment() {
         fitur2 = view.findViewById(R.id.linearRowarrowrightOne)
         fitur3 = view.findViewById(R.id.linearRowarrowrightTwo)
         fitur4 = view.findViewById(R.id.linearRowarrowrightThree)
-        signout = view.findViewById(R.id.linearRowfirrsignout)
 
         fitur1.setOnClickListener{
             val toast = Toast.makeText(requireActivity(), "Coming Soon...", Toast.LENGTH_SHORT)

@@ -45,7 +45,10 @@ class MainActivity : AppCompatActivity() {
 
                         R.id.navigation_home -> replaceFragment(Home())
                         R.id.navigation_profile -> replaceFragment(Profile())
-
+                        R.id.navigation_signout -> {
+                            signInViewModel.SignOut()
+                        }
+                        
                         else ->{
                         }
                     }

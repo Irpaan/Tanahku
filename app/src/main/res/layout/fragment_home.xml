@@ -61,14 +61,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="18dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="330dp"
         android:textStyle="bold"
         android:text="Lainnya"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="18dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="350dp"
         android:text="Fitur Bermanfaat Untuk Kamu"/>
 
@@ -91,7 +91,7 @@
             android:layout_marginBottom="14dp"
             android:scaleType="fitXY"
             tools:ignore="ContentDescription,ImageContrastCheck"
-            android:src="@drawable/img_group21" />
+            android:src="@drawable/fitur1" />
         <LinearLayout android:gravity="start"
             android:id="@+id/linearColumnh3bold"
             android:layout_height="wrap_content"
