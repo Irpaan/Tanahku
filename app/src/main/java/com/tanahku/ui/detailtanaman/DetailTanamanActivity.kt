@@ -2,6 +2,7 @@ package com.tanahku.ui.detailtanaman
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.tanahku.databinding.ActivityDetailTanamanBinding
 
@@ -32,6 +33,10 @@ class DetailTanamanActivity : AppCompatActivity() {
         binding.kegunaan1.text = kegunaan1
         binding.kegunaan2.text = kegunaan2
         binding.kegunaan3.text = kegunaan3
+        binding.pelajariButton.setOnClickListener{
+            val toast = Toast.makeText(this, "Coming Soon...", Toast.LENGTH_SHORT)
+            toast.show()
+        }
     }
 
     companion object{

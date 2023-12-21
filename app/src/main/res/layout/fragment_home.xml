@@ -52,7 +52,7 @@
         android:id="@+id/img_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/toko"
+        android:src="@drawable/homev2"
         android:layout_marginTop="140dp"
         android:layout_gravity="center_horizontal"
         android:scaleType="centerCrop">
